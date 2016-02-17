@@ -1,11 +1,12 @@
 var webpack = require('webpack');
+var path = require('path');
 
 var plugins = [
   new webpack.optimize.OccurenceOrderPlugin()
 ];
 
 module.exports = {
-    entry: './src/index.js',
+    entry: './src/index',
     output: {
       path: 'lib',
       filename: 'square.js',
@@ -22,15 +23,14 @@ module.exports = {
         }
       }]
     },
-		externals: [ 
-			{"react": {
-				 root: "React",
-				 commonjs2: "react",
-				 commonjs: "react",
-				 amd: "react"
-				}
+	  externals: [{
+			react: {
+				root: 'React',
+				commonjs2: 'react',
+				commonjs: 'react',
+				amd: 'react'
 			}
-		],
+		}],
     plugins: plugins,
     resolve: {
         extensions: ['', '.js', '.jsx']

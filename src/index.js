@@ -4,7 +4,7 @@ const Square = ({children}) => {
   let style = {
     width:"100px",
     height:"100px",
-    backgroundColor:"blue"
+    backgroundColor:"red"
   }
 
   return (
